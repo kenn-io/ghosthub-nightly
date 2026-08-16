@@ -1,0 +1,16 @@
+name: Sandbox image merge signal
+
+on:
+  merge_group:
+    types: [checks_requested]
+
+permissions: {}
+
+jobs:
+  signal:
+    name: Request fresh sandbox promotion authorization
+    if: github.repository == 'kenn-io/ghosthub'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: 'true'
