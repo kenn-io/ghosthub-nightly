@@ -11,7 +11,7 @@ jobs:
   signal:
     name: Request fresh sandbox promotion authorization
     if: github.repository == 'kenn-io/ghosthub'
-    runs-on: ubuntu-24.04
+    runs-on: namespace-profile-linux-4cpu
     timeout-minutes: 5
     steps:
       - run: 'true'
